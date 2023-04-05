@@ -30,6 +30,8 @@ public static void main(String[] args) throws InterruptedException, IOException 
 		
 //		WebDriver driver = new ChromeDriver();
 		
+		
+		
 		//apply implicit wait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		

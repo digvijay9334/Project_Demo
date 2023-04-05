@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ForgottenPassword {
 
@@ -28,7 +29,10 @@ public class ForgottenPassword {
 		Thread.sleep(3000);
 
 		// implicit wait
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		//explicit wait
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
 
 		// forgotten password
 		WebElement forgotPassword = driver.findElement(By.xpath("//a[text()='Forgotten password?']"));
